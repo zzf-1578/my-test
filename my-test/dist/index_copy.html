@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>my-test</title>
+    <link href="../projectb/lib/projectb-home-components.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but wflow doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app">
+      <div>{{ msg }}</div>
+      <button>按钮</button>
+      <project-b-home></project-b-home>
+    </div>
+    <script src="https://imgt.log56.com/fecdn/js/vue@2.6.14/vue.min.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="../projectb/lib/projectb-home-components.umd.min.js"></script>
+    <script>
+      window['projectb-home-components']({
+        env: 'development',
+        aid: '666',
+        secret: '888'
+      })
+      var app = new Vue({
+        el: '#app',
+        data: {
+          msg: "消息"
+        }
+      })
+      // console.log(window['my-component'].default)
+    </script>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

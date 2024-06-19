@@ -1,0 +1,41 @@
+{
+  "name": "my-test",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --mode testing",
+    "prepub": "vue-cli-service build --mode staging",
+    "publish": "vue-cli-service build --mode production",
+    "lint": "vue-cli-service lint",
+    "build:cicd": "node build_cicd.js",
+    "build:projecta": "cross-env VUE_APP_OUTPUT_DIR=my-test/dist PAGES=v-project-a vue-cli-service build",
+    "build:projectb": "cross-env VUE_APP_OUTPUT_DIR=my-test/dist PAGES=v-project-b vue-cli-service build",
+    "serve:projecta": "cross-env PAGES=v-project-a vue-cli-service serve",
+    "serve:projectb": "cross-env PAGES=v-project-b vue-cli-service serve"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "element-ui": "^2.15.14",
+    "lg-gateway-utils": "^1.0.8",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.19",
+    "@vue/cli-plugin-eslint": "~4.5.19",
+    "@vue/cli-plugin-router": "~4.5.19",
+    "@vue/cli-plugin-vuex": "~4.5.19",
+    "@vue/cli-service": "~4.5.19",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "prettier": "^2.2.1",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
